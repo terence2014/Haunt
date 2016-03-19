@@ -1,0 +1,22 @@
+<div class="buttons header-buttons">
+  <ul class="header-menu">
+    <li><a href="#/submit" class="button button-clear">Submit</a></li>
+    <li><a href class="button button-clear" ng-click="notAvailable()">Report</a></li>
+    <li>
+      <span class="dropdown" dropdown on-toggle="toggled(open)">
+        <button class="button button-icon icon ion-android-more-vertical" dropdown-toggle></button>
+        <ul class="dropdown-menu">
+          <li>
+            <a href ng-click="notAvailable()">Settings</a>
+          </li>
+          <li>
+            <a href="#/about">About</a>
+          </li>
+          <li>
+            <a href ng-click="logout()">Logout</a>
+          </li>
+        </ul>
+      </span>
+    </li>
+  </ul>        
+</div>

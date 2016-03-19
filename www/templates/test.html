@@ -1,0 +1,46 @@
+<ion-view hide-nav-bar="true">
+  <ion-content class="login" has-header="false">
+    <div class="splash-header">
+      <img src="img/splash_header.png" alt="">
+      <img src="img/splash.png" alt="">
+    </div>
+    <div class="row">
+
+      <div class="col"></div>
+
+      <div class="col col-75">
+        <form ng-submit="doLogin(login)">
+          <div class="list">
+            <label class="item item-input">              
+              <input type="text" ng-model="login.username" placeholder="Username">
+            </label>
+            <label class="item item-input">              
+              <input type="password" ng-model="login.password" placeholder="Password">
+            </label>
+            <div class="row">
+              <div class="col">
+                <button type="submit" class="button button-light button-block">
+                  Login
+                </button>
+              </div>
+              <div class="col">
+                <button type="reset" class="button button-light button-block">
+                  Cancel
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col">
+        <a href="#/about" class="button button-light button-icon icon ic-about"></a>
+      </div>
+
+    </div>
+
+    <!-- <div class="about-link">
+      <a class="button icon ion-information-circled" href="#/app/about"></a>
+    </div> -->
+
+  </ion-content>
+</ion-view>

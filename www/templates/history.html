@@ -1,0 +1,39 @@
+<ion-view title="<img src='img/ic_small_logo.png' class='title-image'> History">
+  <ion-nav-bar class="bar-stable" align-title="left" ng-controller="HeaderCtrl">
+    <ion-nav-back-button class="button-clear">
+      <i class="icon ion-ios7-arrow-back"></i>
+    </ion-nav-back-button>
+    <ion-nav-buttons side="right">
+      <header-buttons></header-buttons>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+
+  <ion-content class="has-header" ng-init="init()">
+
+    <div class="padding history">
+      <h2>OFFENCE RECORDS</h2>      
+      <h1>Name: {{name}}</h1>
+      <ion-list class="home-list">
+        <ion-item ng-repeat="item in offencehistory">
+          <div class="row t-row">
+            <div class="col">
+              <p class="text-first">{{item.submittedDate}}</p>
+              <p>{{item.submittedTime}}</p>
+            </div>
+            <div class="col">
+              <div class="pull-left offence-icon">                
+                <img ng-src="{{item.imgSrc}}" alt="{{item.offencetype}}">
+              </div>
+              <div class="offence-type">
+                <p class="text-first">{{item.offencetype}}</p>
+                <p>{{item.fullname}}</p>
+              </div>
+            </div>
+          </div>
+        </ion-item>  
+      </ion-list>
+    </div>
+
+  </ion-content>
+
+</ion-view>

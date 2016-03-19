@@ -1,0 +1,33 @@
+<ion-view title="<img src='img/ic_small_logo.png' class='title-image'> HAUNT" hide-back-button="true">
+  <ion-nav-bar class="bar-stable" align-title="left" ng-controller="HeaderCtrl">
+    <ion-nav-buttons side="right">
+      <header-buttons></header-buttons>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+
+  <ion-content class="has-header" ng-init="init()">
+    <div class="padding">
+      <p>Welcome, {{user.fullname}}</p>
+      <div class="row t-header">
+        <div class="col col-50">Name</div>
+        <div class="col">Class</div>
+        <div class="col">#</div>
+      </div>
+      <ion-list class="home-list">
+        <ion-item ng-repeat="student in summary" ng-click="showHistory(student)">
+          <div class="row t-row">
+            <div class="col col-50">{{student.fullname}}</div>
+            <div class="col">{{student.class}}</div>
+            <div class="col">{{student.score}}</div>
+          </div>
+        </ion-item>
+      </ion-list>
+    </div>
+  </ion-content>
+
+  <div class="fixed-bottom">
+    <button class="button icon ion-loop button-positive" ng-click="fetchData()">
+      Refresh
+    </button>
+  </div>
+</ion-view>

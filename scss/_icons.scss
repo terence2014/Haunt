@@ -1,0 +1,25 @@
+[class^="ic-"],
+[class*=" ic-"] {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  line-height: 14px;
+  vertical-align: text-bottom;    
+  background-position: 14px 14px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.ic-small-logo {
+  background-image: url(../img/ic_small_logo.png);
+  background-size: contain;
+  width: 32px;
+  height: 32px;  
+}
+
+.ic-about:after {
+  background-image: url(../img/icon_info.png);
+  background-size: contain;
+  width: 24px;
+  height: 24px;  
+}

@@ -1,0 +1,39 @@
+<ion-view title="<img src='img/ic_small_logo.png' class='title-image'> Submit">
+  <ion-nav-bar class="bar bar-stable" align-title="left">
+    <ion-nav-back-button class="button-clear">
+      <i class="icon ion-ios7-arrow-back"></i>
+    </ion-nav-back-button>
+  </ion-nav-bar>
+  
+  <ion-content class="padding" scroll="false" ng-init="init()">
+    <h1>Submit an offence incident</h1>
+    <form id="submitForm" class="submit-offence" ng-submit="doSubmit(incident)">
+      <div class="list">
+        <label class="item item-input item-select">
+          <span class="input-label">Class</span>
+          <select id="select-class" ng-options="item.class for item in classes" ng-model="incident.classItem" ng-change="classChanged(incident.classItem)">
+            <option value="">--SELECT--</option>            
+          </select>
+        </label>
+        <label class="item item-input item-select">
+          <span class="input-label">Name</span>
+          <select id="select-name" ng-options="item.fullname for item in students" ng-model="incident.student" disabled>
+            <option value="">--SELECT--</option>
+          </select>
+        </label>
+        <label class="item item-input item-select">
+          <span class="input-label">Offence</span>
+          <select id="select-offence" ng-options="item.offencetype for item in offencetypes" ng-model="incident.offence">
+            <option value="">--SELECT--</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="button-bar padding">
+        <button type="submit" class="button button-positive">Submit</button>
+        <button type="button" class="button" ng-click="reset()">Cancel</a>
+      </div>
+
+    </form>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,22 @@
+<ion-view view-title="<img src='img/ic_small_logo.png' class='title-image'> About"> 
+  <ion-nav-bar class="bar bar-stable" align-title="left">
+    <ion-nav-back-button class="button-clear">
+      <i class="icon ion-ios7-arrow-back"></i>
+    </ion-nav-back-button>
+  </ion-nav-bar>
+
+  <ion-content class="padding" scroll="false" ng-init="init()">
+    <div class="padding">
+      <h1>Information</h1>
+      <p>App Version: {{appinfo.version}}</p>
+      <p>App Code: {{appinfo.code}}</p>
+      <p>Device Model: {{appinfo.device_model}}</p>
+      <p>Device Build Version: {{appinfo.build_version}}</p>
+    </div>
+    <div class="padding">
+      <h1>ABOUT</h1>
+      <p>HAUNT is used to record offences in XMSS. It provides an easy means of submitting and reporting offences.</p>
+      <p>Data collected is only accessible by authorised teachers for purpose of collating and reviewing student discipline records.</p>
+    </div>
+  </ion-content>
+</ion-view>
